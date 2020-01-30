@@ -1,0 +1,21 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+
+    height: 100vh;
+    background-color: darkslateblue;
+    font-family: sans-serif;
+}
+
+.score{
+    color: whitesmoke;
+    height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
