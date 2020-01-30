@@ -2,8 +2,8 @@
 
 const game = ()=> {
 
-  let playerScore = 0;
-  let computerScore = 0;
+  let pScore = 0;
+  let cScore = 0;
 
 const startGame = () =>{
 const playBtn = document.querySelector('.intro button');
@@ -44,13 +44,21 @@ compareHands(this.textContent,computerChoice);
   });
 };
 
+    const updateScore = () =>{
+        const playerScore = document.querySelector('.player-score p');
+        const computerScore = document.querySelector('.computer-score p');
+        playerScore.textContent = pScore;
+        computerScore.textContent = cScore;
+    };
+
     const compareHands = (playerChoice, computerChoice) =>{
         //update text
         const winner = document.querySelector('.winner');
 
         //checking for tie
         if(playerChoice === computerChoice){
-            winner.textContent = 'It is a tie"'
+            winner.textContent = 'It is a tie';
+            return;
         }
 
         //check for rock
@@ -58,9 +66,11 @@ compareHands(this.textContent,computerChoice);
 
             if (computerChoice === 'scissors'){
                 winner.textContent = 'player wins';
+                pScore++;
                 return;
             }else{
                 winner.textContent = 'computer wins';
+                cScore++;
                 return;
             }
         }
@@ -70,9 +80,13 @@ compareHands(this.textContent,computerChoice);
 
             if (computerChoice === 'scissors'){
                 winner.textContent = 'computer wins';
+                cScore++;
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'player wins';
+                pScore++;
+                updateScore();
                 return;
             }
         }
@@ -82,9 +96,13 @@ compareHands(this.textContent,computerChoice);
 
             if (computerChoice === 'rock'){
                 winner.textContent = 'computer wins';
+                cScore++;
+                updateScore();
                 return;
             }else{
                 winner.textContent = 'player wins';
+                pScore++;
+                updateScore();
                 return;
             }
         }
