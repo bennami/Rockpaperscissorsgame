@@ -1,6 +1,6 @@
 # Rockpaperscissorsgame
 
-find result [here](https://bennami.github.io/Rockpaperscissorsgame/)
+It took me 2 hours, find result [here](https://bennami.github.io/Rockpaperscissorsgame/)
 
 game tutorial by [devEd](https://www.youtube.com/watch?v=qWPtKtYEsN4) 
 
