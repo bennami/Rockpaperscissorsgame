@@ -5,24 +5,24 @@ const game = ()=> {
   let pScore = 0;
   let cScore = 0;
 
-const startGame = () =>{
-const playBtn = document.querySelector('.intro button');
- const introScreen = document.querySelector('.intro');
- const match = document.querySelector('.match');
+  const startGame = () =>{
+  const playBtn = document.querySelector('.intro button');
+  const introScreen = document.querySelector('.intro');
+  const match = document.querySelector('.match');
 
- playBtn.addEventListener('click', () =>{
+playBtn.addEventListener('click', () =>{
 
      introScreen.classList.add("fadeOut");
      match.classList.add("fadeIn");
     });
 };
+  
 //play match
     const playMatch = () => {
-
-      let options = document.querySelectorAll('.options button');
+     let options = document.querySelectorAll('.options button');
      let playerHand = document.querySelector('.player-hand');
-      let computerHand = document.querySelector('.computer-hand');
-    const hands = document.querySelectorAll('.hands img');
+     let computerHand = document.querySelector('.computer-hand');
+     const hands = document.querySelectorAll('.hands img');
 
     hands.forEach(hand =>{
 
@@ -33,8 +33,7 @@ const playBtn = document.querySelector('.intro button');
 
       //computer options
         const computerOptions = ['rock', 'paper', 'scissors'];
-options.forEach((option)=>{
-
+    options.forEach((option)=>{
 
     //using normal function because inside arrow function 'this' will not bind itself to the keyword option
     option.addEventListener('click', function () {
@@ -47,12 +46,6 @@ options.forEach((option)=>{
             playerHand.src = `./assets/img/${this.textContent}.png`;
             computerHand.src = `./assets/img/${computerChoice}.png`;
         }, 2000);
-
-        //console.log(computerChoice)
-        //here is where we call compare hands
-
-
-
 
         //animation
         playerHand.style.animation="shakePlayer 2s ease";
